@@ -1,0 +1,106 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Open Sans";
+}
+
+html, body{
+	height: 100%;
+}
+
+@font-face{
+	src: url(../fonts/OpenSans-Light.ttf);
+	font-family: "Open Sans";
+}
+
+.container-forms{
+	max-width: 1280px;
+	width: 100%;
+    display: flex;
+	justify-content: center;
+}
+
+.form{
+	padding: 15px;
+    margin: 15px;
+	width: 400px;
+	border: 5px solid rgba(120,120,120,0.7);
+	border-radius: 5px;
+	background-color: #ffffff;
+}
+
+.form h2{
+    margin-bottom: 30px;
+	font-weight: bolder;
+	color: #808080;
+	font-size: 22px;
+	text-align: justify;
+}
+
+.form h3{
+    margin-top: 30px;
+	font-weight: bolder;
+	color: #808080;
+	font-size: 14px;
+	text-align: right;
+}
+
+.input-container span{
+	display: inline-block;
+	width: 100%;
+	color: #808080;
+	font-size: 18px;
+}
+
+.input-container input{
+	padding: 8px;
+	margin-top: 2px;
+    margin-bottom: 15px;
+	width: 350px;
+	height: 40px;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	font-size: 15px;
+	color: #999999;
+}
+
+.input-container select{
+	padding: 8px;
+	margin-top: 2px;
+    margin-bottom: 15px;
+	width: 350px;
+	height: 40px;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	font-size: 17px;
+	color: #999999;
+}
+
+.submit-container input{
+	display: inline-block;
+	width: 172px;
+	height: 40px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+	background-color: #527953;
+	color: #ffffff;
+    text-align: center;
+	font-size: 15px;
+	font-weight: bolder;
+	border: 0;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.submit-container input:hover{
+	background-color: #2f5730;
+}
+
+@media screen and (max-width:900px){
+	.container-forms{
+		flex-direction: column;
+		align-items: center;
+	}
+	
+}

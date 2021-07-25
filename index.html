@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cadastro de Usuários e Produtos</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script type="text/javascript" src="js/script-prod.js"></script>
+        <script type="text/javascript" src="js/script-user.js"></script>
+
+    </head>
+
+    <body onload="carregarListaUsuarios('totalLista'), carregarTotalEstoque('totalEstoque')">
+        <div class="container-forms">
+            <div class="form" id="form1">
+                <h2>Cadastro de Usuário</h2>
+
+                <form id="user-form">
+                    <div class= "input-container">
+                        <span>Nome: </span>
+                        <input type="text" name="nome" id="nomeUser" placeholder="Nome Completo">
+
+                    </div><!--input-container-->
+
+                    <div class= "input-container">
+                        <span>E-mail: </span>
+                        <input type="email" name="email" id="emailUser" placeholder="exemplo@provedor.com">
+
+                    </div><!--input-container-->
+
+                    <div class= "input-container">
+                        <span>Telefone: </span>
+                        <input type="tel" name="telefone" id="telUser" placeholder="(99) 9999-9999">
+
+                    </div><!--input-container-->
+
+                    <div class= "submit-container">
+                        <input type="button" name="registra usuário" value="Cadastrar" onclick="validarUsuario('nomeUser','emailUser','telUser')">
+                        <input type="button" name="lista de usuários" value="Lista de Usuários" onclick="window.open('lista-usuarios.html','_self')">
+                        
+                    </div><!--submit-container-->
+
+                </form><!--user-form-->
+
+                <h3>Usuários Cadastrados: <span id="totalLista">0</span></h3>
+
+            </div><!--form1-->
+            
+            <div class="form" id="form2">
+                <h2>Registro de Produto</h2>
+
+                <form id="prod-form">
+                    <div class= "input-container">
+                        <span>Nome do Produto: </span>
+                        <input type="text" name="nome do produto" id="nomeProd" placeholder="Ex.: Arroz 1kg">
+
+                    </div><!--input-container-->
+
+                    <div class= "input-container">
+                        <span>Código do Produto: </span>
+                        <input type="text" name="código do produto" id="codProd" placeholder="Ex.: ar01">
+
+                    </div><!--input-container-->
+
+                    <div class= "input-container">
+                        <span>Quantidade de itens: </span>
+                        <select name="quantidade de produtos" id="quantProd">
+                            <option id="1">1</option>
+                            <option id="2">2</option>
+                            <option id="3">3</option>
+                            <option id="4">4</option>
+                            <option id="5">5</option>
+                            <option id="6">6</option>
+                            <option id="7">7</option>
+                            <option id="8">8</option>
+                            <option id="9">9</option>
+                            <option id="10">10</option>
+                            <option id="20">20</option>
+                            <option id="50">50</option>
+                            <option id="100">100</option>
+
+                        </select>
+
+                    </div><!--input-container-->
+
+                    <div class= "submit-container">
+                        <input type="button" name="registra produto" value="Registrar" onclick="validarProduto('nomeProd','codProd','quantProd')">
+                        <input type="button" name="lista de produtos" value="Inventário" onclick="window.open('inventario-produtos.html','_self')">
+                        
+                    </div><!--submit-container-->
+
+                </form><!--prod-form-->
+
+                <h3>Produtos Registrados: <span id="totalEstoque">0</span></h3>
+
+            </div><!--form2-->
+
+        </div><!--container-forms-->
+
+    </body>
+
+</html>
